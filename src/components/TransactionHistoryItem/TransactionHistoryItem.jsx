@@ -1,12 +1,13 @@
+import css from './TransactionHistoryItems.module.css'
+
 export default function TransactionHistoryItems({
     item: { type, amount, currency }
 }) {
     return (
-        <div>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-        </div>
-    
+        <>
+            <td className={css.name}>{type}</td>
+            <td className={css.name}>{amount}</td>
+            <td className={css.name}>{currency}</td>
+        </>
     )
 }

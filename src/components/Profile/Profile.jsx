@@ -1,23 +1,23 @@
-// import Profile from '../Profile/Profile.module.css'
+import css from './Profile.module.css';
 
 export default function Profile({
      user:{avatar, username, tag, location,  stats},
     }) {
     return (
-        <div>
-            <div>
-                <img
+        <div className={css.container}>
+            <div className={css.imgName}>
+                <img className={css.img}
                     src= {avatar}
                     alt="User avatar"
                 />
-                <p>{username}</p>
-                <p>@{tag}</p>
-                <p>{location}</p>
+                <p className={css.username}>{username}</p>
+                <p className={css.tagLocation}>@{tag}</p>
+                <p className={css.tagLocation}>{location}</p>
           </div>
 
-            <ul>
+            <ul className={css.list}>
                 {Object.entries(stats).map(([key, value]) =>
-                    (<li key={key}><span>{key}</span><span>{value}</span></li>))}
+                    (<li key={key} className={css.item}><span>{key}</span><span className={css.keyValue}>{value}</span></li>))}
             </ul>
         </div> 
     );
