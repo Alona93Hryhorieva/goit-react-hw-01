@@ -1,3 +1,5 @@
+// import Profile from '../Profile/Profile.module.css'
+
 export default function Profile({
      user:{avatar, username, tag, location,  stats},
     }) {

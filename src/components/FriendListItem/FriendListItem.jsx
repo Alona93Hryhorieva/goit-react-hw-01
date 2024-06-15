@@ -1,4 +1,5 @@
 // import clsx from "clsx";
+// import FriendListItem from '../FriendListItem/FriendListItem.module.css'
 
 export default function FriendListItem({
     friend:{avatar, name, isOnline}
@@ -7,9 +8,9 @@ export default function FriendListItem({
     return (
         <div>
            <div>
-              <img src={avatar} alt="Avatar" width="48" />
+             <img src={avatar} alt="Avatar" width="48" />
              <p>{name}</p>
-             <p>{isOnline}</p>
+             <p>{isOnline  === true ? "Online" : "Offline"}</p>
           </div>
         </div>
     )
